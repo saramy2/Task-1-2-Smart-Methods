@@ -1,0 +1,19 @@
+ESP32 Algorithm 
+Connect the ESP32 using the port
+Download Arduino IDE 
+run Arduino IDE
+Click on file and then choose preferences 
+use , "https://dl.espressif.com/dl/package_esp32_index.json” to put the package 
+go to tool then choose Arduino panel then panel manager
+A type screen will appear in the ESP32 dialog box and then press the installation process
+From tools then go to board then manage 
+From tools choose Arduino panel then ESP32 Arduino 
+Connect the ESP32 to the usb cord to the computer 
+From tools click on ESP32 Arduino 
+and choose WEMOS D1 MINI ESP32 controller
+From Tools, Go to port COM3, then choose COM3.
+to turn on the lighting:
+From file, then choose examples, then choose basic, then choose blink.
+To make sure the ESP32 is working 
++Then a page press an arrow tick appears in the address bar on the left side of the upload process 
++The blue light begins to point quickly or at medium speed.

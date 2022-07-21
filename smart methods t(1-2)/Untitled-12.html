@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/44.1/css/bootstrap.min.css">
+    
+
+    <style>
+
+        body {
+     
+            font-family: arial;
+     
+        }
+     
+        button {
+     
+            padding:10px;
+     
+            background-color:#144220;
+     
+            color: #61fd06;
+     
+            border: 0px;
+     
+            cursor:pointer;
+     
+            border-radius: 5px;
+     
+        }
+     
+       </style>
+
+    <title> speach to text in Arabic   </title>
+
+
+   
+</head>
+<body>
+
+<div class = "container">
+    
+    
+    
+
+           <h2> Hello ! Speak in Arabic please</h2>
+
+           <p>Click on the button to speak </p>
+   
+           <p><button type="button" onclick="runSpeechRecognition()">Speech to Text</button> &nbsp; <span id="action"></span></p>
+   
+           <div id="output" class="hide"></div>
+        </div>
+    
+</div>
+
+
+<script>
+
+
+
+    function runSpeechRecognition() {
+
+var output = document.getElementById("output");
+
+var action = document.getElementById("action");
+
+      var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+
+      var recognition = new SpeechRecognition();
+
+      recognition.lang = 'ar';
+      recognition.onstart = function() {
+
+          action.innerHTML = "<small>**listening....**</small>";
+
+      };
+
+
+     
+
+
+      recognition.onresult = function(event) {
+
+     
+
+
+
+
+var transcript = event.results[0][0].transcript;
+
+output.innerHTML = "<b>Text:</b> "+ transcript ;
+
+output.classList.remove("hide");
+
+            };
+
+
+
+       recognition.start();
+
+}
+
+</script>
+
+</body>
+
+</html>
